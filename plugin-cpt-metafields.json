@@ -1,0 +1,93 @@
+{
+  "custom_post_type": "cookielist_nscs",
+  "post_meta_fields": [
+    {
+      "slug": "_cookie_category_nscs",
+      "extra_validation_name": false,
+      "nice_name": "Category",
+      "explanation": "What kind of cookie? Marketing, Required, Retargeting..",
+      "show_as_table_column": true,
+      "editable": true
+    },
+    {
+      "slug": "_cookie_type_nscs",
+      "extra_validation_name": false,
+      "nice_name": "Type",
+      "explanation": "persistent, session, third party",
+      "show_as_table_column": true,
+      "editable": true
+    },
+    {
+      "slug": "_cookie_duration_nscs",
+      "extra_validation_name": false,
+      "nice_name": "Duration",
+      "explanation": "How long it takes until the cookie expires.",
+      "show_as_table_column": true,
+      "editable": true
+    },
+    {
+      "slug": "_crawled_at_nscs",
+      "extra_validation_name": "timestamp_to_datetime",
+      "nice_name": "Last seen",
+      "explanation": "When the cookie was last seen by the crawler",
+      "show_as_table_column": true,
+      "editable": false
+    },
+    {
+      "slug": "_technology_nscs",
+      "extra_validation_name": false,
+      "nice_name": "Technology",
+      "explanation": "What technology is used: cookie, localstorage..",
+      "show_as_table_column": true,
+      "editable": true
+    },
+    {
+      "slug": "_consent_status_nscs",
+      "extra_validation_name": false,
+      "nice_name": "Consent Status",
+      "explanation": "With which consent status was the cookie seen.",
+      "show_as_table_column": false,
+      "editable": false
+    },
+    {
+      "slug": "_cookie_domain_nscs",
+      "extra_validation_name": false,
+      "nice_name": "Domain",
+      "explanation": "Domain of cookie",
+      "show_as_table_column": true,
+      "editable": true
+    },
+    {
+      "slug": "_cookie_sameSite_nscs",
+      "extra_validation_name": false,
+      "nice_name": "sameSite",
+      "explanation": "sameSite Attribute of cookie",
+      "show_as_table_column": true,
+      "editable": true
+    },
+    {
+      "slug": "_cookie_source_nscs",
+      "extra_validation_name": false,
+      "nice_name": "Source",
+      "explanation": "manually or crawler",
+      "show_as_table_column": true,
+      "editable": false
+    },
+    {
+      "slug": "_crawl_request_datetime_nscs",
+      "extra_validation_name": false,
+      "nice_name": "Crawl request datetime",
+      "explanation": "When was crawl requested",
+      "show_as_table_column": false,
+      "editable": false
+    },
+    {
+      "slug": "_urls_with_this_cookie_nscs",
+      "extra_validation_name": false,
+      "nice_name": "Urls with cookie",
+      "explanation": "On which URLs the cookie was found.",
+      "show_as_table_column": false,
+      "editable": false
+    }
+  ]
+}

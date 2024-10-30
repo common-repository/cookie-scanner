@@ -1,0 +1,30 @@
+@media screen and (max-width: 768px) {
+  .cookie_list_nscs table {
+    width: 100%;
+  }
+
+  .cookie_list_nscs thead {
+    display: none;
+  }
+
+  .cookie_list_nscs tr:nth-of-type(2n) {
+    background-color: inherit;
+  }
+
+  .cookie_list_nscs tr td:first-child {
+    background: #f0f0f0;
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+
+  .cookie_list_nscs tbody td {
+    display: block;
+    text-align: center;
+  }
+
+  .cookie_list_nscs tbody td:before {
+    content: attr(data-th);
+    display: block;
+    text-align: center;
+  }
+}

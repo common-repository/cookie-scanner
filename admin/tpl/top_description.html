@@ -1,0 +1,35 @@
+{{cron_result_crawling_result_error}} {{cron_crawling_request_result_error}}
+<p>
+  <strong>License Name: </strong>{{name}}<br />
+  <strong>Pagecrawls included: </strong>{{allowed_crawls}} in
+  {{crawls_allowed_within_days}} days. (+ {{additional_crawls_budget}} one time
+  crawls) <br />
+  <strong
+    >Crawls left for time period ({{crawls_allowed_within_days}} days): </strong
+  >{{crawls_left}}<br />
+  <strong>Pages crawled in last {{crawls_allowed_within_days}} days: </strong
+  >{{crawls_done_in_timeframe}}<br />
+  <strong>Pagecrawls needed per request with current settings: </strong
+  >{{page_consumption}}<br />
+</p>
+<p>
+  Get more crawls:
+  <a href="https://cookie-scanner.com/" target="_blank">cookie-scanner.com</a>
+</p>
+<p>
+  Use shortcode [cookie_list_nscs] to diplay your cookie list anywhere on your
+  page.
+</p>
+<div>
+  <span>
+    <form method="POST">
+      <input type="text" name="crawl_now" value="crawl_now" hidden />
+      <input
+        class="button button-secondary"
+        type="submit"
+        value="crawl website now"
+      />
+    </form>
+  </span>
+  <p>Last crawl: {{last_crawled}}</p>
+</div>

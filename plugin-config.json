@@ -1,0 +1,216 @@
+{
+  "plugin_slug": "cookie-scanner-nscs",
+  "plugin_name": "Cookie Scanner",
+  "plugin_prefix": "nscs_",
+  "settings_page_configs": {
+    "page_title": "Cookie Scanner Settings",
+    "menu_title": "Settings",
+    "description": "top_description.html",
+    "capability": "manage_options"
+  },
+  "setting_page_fields": {
+    "active_tab_slug": "",
+    "active_tab_index": 0,
+    "tabs": [
+      {
+        "tabname": "General",
+        "tab_description": "tab_general.html",
+        "tab_slug": "cookie_overview",
+        "form_action": "",
+        "active": false,
+        "tabfields": [
+          {
+            "field_slug": "auto_crawling_intervall",
+            "type": "select",
+            "required": false,
+            "selectable_values": [
+              { "value": "hourly", "name": "hourly" },
+              {
+                "value": "daily",
+                "name": "daily"
+              },
+              { "value": "every_week", "name": "weekly" },
+              { "value": "every_second_week", "name": "every two weeks" },
+              { "value": "every_month", "name": "monthly" },
+              { "value": "disable", "name": "disable" }
+            ],
+            "extra_validation_name": false,
+            "pre_selected_value": "disable",
+            "helpertext": "Next scheduled run: {{next_scheduled_crawl_request}}",
+            "name": "Auto crawling intervall",
+            "save_in_db": true
+          },
+          {
+            "field_slug": "new_cookie_notification",
+            "type": "checkbox",
+            "required": false,
+            "pre_selected_value": false,
+            "extra_validation_name": false,
+            "helpertext": "Get an e-mail, if a new cookie pops up.",
+            "name": "New Cookie Notification",
+            "save_in_db": true
+          },
+          {
+            "field_slug": "new_cookie_notification_email",
+            "type": "longtext",
+            "required": false,
+            "extra_validation_name": false,
+            "pre_selected_value": "{{user_email}}",
+            "helpertext": "",
+            "name": "New Cookie Notification E-Mail",
+            "save_in_db": true
+          }
+        ]
+      },
+      {
+        "tabname": "Crawling Settings",
+        "tab_description": "tab_crawling_settings.html",
+        "tab_slug": "crawling_settings",
+        "form_action": "options.php",
+        "active": false,
+        "tabfields": [
+          {
+            "field_slug": "pages_to_crawl",
+            "type": "textarea",
+            "required": false,
+            "pre_selected_value": "{{home_url}}",
+            "extra_validation_name": "form_field_check_input_url",
+            "helpertext": "Please add one valid url per line.",
+            "name": "Pages to check",
+            "save_in_db": true
+          }
+        ]
+      },
+      {
+        "tabname": "Cookie Shortcode Settings",
+        "tab_description": "",
+        "tab_slug": "cookie_shortcode_settings",
+        "form_action": "",
+        "active": false,
+        "tabfields": [
+          {
+            "field_slug": "shortcode_group_by",
+            "type": "select",
+            "required": false,
+            "selectable_values": [
+              { "value": "cookiename", "name": "Cookie Name" }
+            ],
+            "extra_validation_name": false,
+            "pre_selected_value": "cookiename",
+            "helpertext": "",
+            "name": "Group Table by",
+            "save_in_db": true
+          },
+          {
+            "field_slug": "cookie_table_th_cookie_name",
+            "type": "longtext",
+            "required": false,
+            "extra_validation_name": false,
+            "pre_selected_value": "Cookie Name",
+            "helpertext": "Translate 'Cookie Name' in your language, or use a word, that suits you more.",
+            "name": "Headline: Cookie Name",
+            "save_in_db": true
+          },
+          {
+            "field_slug": "cookie_table_th_details",
+            "type": "longtext",
+            "required": false,
+            "extra_validation_name": false,
+            "pre_selected_value": "Details",
+            "helpertext": "Translate 'Details' in your language, or use a word, that suits you more.",
+            "name": "Headline: Details",
+            "save_in_db": true
+          },
+          {
+            "field_slug": "cookie_table_th_description",
+            "type": "longtext",
+            "required": false,
+            "extra_validation_name": false,
+            "pre_selected_value": "Description",
+            "helpertext": "Translate 'Description' in your language, or use a word, that suits you more.",
+            "name": "Headline: Description",
+            "save_in_db": true
+          },
+          {
+            "field_slug": "cookie_table_th_domain",
+            "type": "longtext",
+            "required": false,
+            "extra_validation_name": false,
+            "pre_selected_value": "Domain",
+            "helpertext": "Translate 'Domain' in your language, or use a word, that suits you more.",
+            "name": "Headline: Domain",
+            "save_in_db": true
+          },
+          {
+            "field_slug": "cookie_table_th_type",
+            "type": "longtext",
+            "required": false,
+            "extra_validation_name": false,
+            "pre_selected_value": "Type",
+            "helpertext": "Translate 'Type' in your language, or use a word, that suits you more.",
+            "name": "Headline: Type",
+            "save_in_db": true
+          },
+          {
+            "field_slug": "cookie_table_th_category",
+            "type": "longtext",
+            "required": false,
+            "extra_validation_name": false,
+            "pre_selected_value": "Category",
+            "helpertext": "Translate 'Category' in your language, or use a word, that suits you more.",
+            "name": "Headline: Category",
+            "save_in_db": true
+          },
+          {
+            "field_slug": "cookie_table_th_duration",
+            "type": "longtext",
+            "required": false,
+            "extra_validation_name": false,
+            "pre_selected_value": "Duration",
+            "helpertext": "Translate 'Duration' in your language, or use a word, that suits you more.",
+            "name": "Headline: Duration",
+            "save_in_db": true
+          }
+        ]
+      },
+      {
+        "tabname": "FAQ",
+        "tab_description": "tab_faq.html",
+        "tab_slug": "faq",
+        "form_action": "display_only",
+        "active": false,
+        "tabfields": [
+          {
+            "field_slug": "",
+            "type": "",
+            "required": false,
+            "pre_selected_value": "",
+            "extra_validation_name": "",
+            "helpertext": "",
+            "name": "",
+            "save_in_db": true
+          }
+        ]
+      },
+      {
+        "tabname": "License",
+        "tab_description": "tab_license.html",
+        "tab_slug": "cookie_scanner_license",
+        "form_action": "display_only",
+        "active": false,
+        "tabfields": [
+          {
+            "field_slug": "cookie_scanner_license_key",
+            "type": "longtext",
+            "required": false,
+            "pre_selected_value": "",
+            "extra_validation_name": false,
+            "helpertext": "",
+            "name": "License key",
+            "save_in_db": false
+          }
+        ]
+      }
+    ]
+  }
+}
